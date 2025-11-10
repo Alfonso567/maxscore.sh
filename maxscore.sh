@@ -4,11 +4,11 @@
 # CPSC298
 
 scores=()
-echo "Enter 5 positive numbers:"
+echo "Enter 5 positive integers:"
 for i in {1..5}; do
-    read -p -r "Score $i: " num
+    read -r -p "Score $i: " num
     if ! [[ "$num" =~ ^[0-9]+$ ]] || [ "$num" -le 0 ]; then
-        echo "Invalid input. Please enter a positive numbers."
+        echo "Invalid input. Please enter a positive integer."
         exit 1
     fi
     scores+=("$num")
